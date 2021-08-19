@@ -98,7 +98,7 @@ class Game extends React.Component {
     this.state = {
       cells: Array(9).fill(null),
       xIsNext: true,
-      players: ['PLayerX', 'PlayerO'],
+      players: ['PlayerX', 'PlayerO'],
       winNumbers: [0, 0]
     }
   }
@@ -164,7 +164,7 @@ class Game extends React.Component {
 
   handleChange(value, i) {
     let players = this.state.players;
-    players[i] = value;
+    players[i] = value === '' ? players[i] : value;
     this.setState({
       players
     })

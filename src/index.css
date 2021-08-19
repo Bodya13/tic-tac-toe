@@ -61,6 +61,7 @@ body, h3 {
   border: none;
   background-color: #423763;
   font-size: 1.5rem;
+  color: #fff;
 }
 
 .cell:nth-child(3n) {
