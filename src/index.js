@@ -78,11 +78,13 @@ class Modal extends React.Component {
           <h3>Write a name for player X:</h3>
           <input type="text" 
             value={this.props.players[0]} 
+            placeholder="Player X"
             onChange={(event, i=0) => this.props.onchange(event.target.value, i)} 
           />
           <h3>Write a name for player O:</h3>
           <input type="text" 
             value={this.props.players[1]} 
+            placeholder="Player O"
             onChange={(event, i=1) => this.props.onchange(event.target.value, i)}
           />
           <button onClick={() => {this.setState({active: !this.state.active})}}>OK</button>
@@ -164,7 +166,7 @@ class Game extends React.Component {
 
   handleChange(value, i) {
     let players = this.state.players;
-    players[i] = value === '' ? players[i] : value;
+    players[i] = value;
     this.setState({
       players
     })
